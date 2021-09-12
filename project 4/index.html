@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>form validation</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background: rgba(0, 0, 0,0.5) url('image/go-pro-1478810_1920.jpg') no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+      background-blend-mode: overlay;
+
+    }
+    #success{
+      background: rgb(66, 245, 126,0.4);
+      background-blend-mode: overlay;
+    }
+    #failure{
+      background: rgba(230, 32, 32,0.5);
+      background-blend-mode: overlay;
+    }
+    label{
+      font-size: 1.3rem;
+      color: white;
+      text-decoration-style: solid black;
+    }
+    h1{
+      color: white;
+      text-transform: uppercase;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+    h1:hover{
+      transform: rotateX(360deg);
+      color: black;
+     
+    }
+    #pawanin{
+      border: 2px solid black;
+    }
+    #travelimg{
+      height: 95vh;
+      width: 100%;
+      margin-left: 25px;
+      margin-top: -10px;
+      margin-bottom: 25px;
+      transition: 0.5s ease;
+      cursor: pointer;
+    }
+    #travelimg:hover{
+      transform: scale(1.1);
+    }
+    .pawanbtn{
+      width: 200px;
+      border-radius: 25px 25px;
+      
+    }
+    
+    .container{
+      padding: 25px 25px ;
+
+    }
+    strong{
+      color: black;
+    }
+    /* form{
+      padding: 25px 25px;
+    } */
+  </style>
+</head>
+<body>
+  <div id="success" class="alert alert-success alert-dismissible fade " role="alert">
+    <strong>hello!your form are submitted</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="failure" class="alert alert-danger alert-dismissible fade" role="alert">
+    <strong>Holy guacamole!You form are not submitted fill the all details</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="mian">
+  <div class="container">
+    <h1>travel booking</h1>
+    <div class="row">
+      <div class="col-6">
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Enter the name</label>
+            <input type="text" class="form-control pawanin" id="username" placeholder="enter the name">
+            <small id="namevalid" class="form-text text-muted invalid-feedback">
+              please enter the reuired name
+            </small>
+    
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Enter the email</label>
+            <input type="email" class="form-control" id="email" placeholder="enter the email">
+            <small id="emailvalid" class="form-text text-muted invalid-feedback">
+              please enter the reuired email
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">select car</label>
+            <select class="form-control" id="cars">
+              <option>select</option>
+              <option>odi</option>
+              <option>jaguar</option>
+              <option>lemorgini</option>
+              <option>porse</option>
+              <option>bucati</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect2">enter the address</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Enter the phone number</label>
+            <input type="phone" class="form-control" id="phone" placeholder="enter the number">
+            <small id="numbervalid" class="form-text text-muted invalid-feedback">
+              reuired upto 10 digit number
+            </small>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Any other message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button id="submit" class="btn btn-danger pawanbtn" type="submit">submit</button>
+        </form>
+      </div>
+      <div class="col-6">
+        <img src="image/travel.png" alt="" srcset="" id="travelimg">
+      </div>
+     
+    </div>
+   
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="index.js">
+  </script>
+</body>
+</html>
